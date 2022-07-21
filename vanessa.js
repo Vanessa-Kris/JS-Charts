@@ -28,7 +28,7 @@ function drawChart() {
     // Create the data table.
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Months');
-    data.addColumn('number', 'Day');
+    data.addColumn('number', 'Subscriber(s)');
     data.addRows([
         ['Jan', entry.get('January')],
         ['Feb', entry.get('February')],
