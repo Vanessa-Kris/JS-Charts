@@ -1,13 +1,3 @@
-// Create a Map
-// const fruits = new Map([
-//     ["apples", 500],
-//     ["bananas", 300],
-//     ["oranges", 200]
-//   ]);
-
-//   console.log(fruits.size);
-//   console.log(fruits.get("apples"));
-
 // Load the Visualization API and the corechart package.
 google.charts.load('current', {
     'packages': ['corechart']
@@ -21,26 +11,55 @@ google.charts.setOnLoadCallback(drawChart);
 // draws it.
 function drawChart() {
     const entry = new Map();
-    entry.set('January', 0);
-    entry.set('February', 5);
-    entry.set('March', 10);
-   
+    entry.set('January', 1);
+    entry.set('February', 4);
+    entry.set('March', 6);
+    entry.set('April', 8);
+    entry.set('May', 10);
+    entry.set('June', 16);
+    entry.set('July', 19);
+    entry.set('August', 17);
+    entry.set('September', 13);
+    entry.set('October', 6);
+    entry.set('November', 20);
+    entry.set('December', 31);
+
 
     // Create the data table.
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Months');
-      data.addColumn('number', 'Slices');
-      data.addRows([
-        ['January', entry.get('January')],
-        ['February', entry.get('February')],
-        ['March', entry.get('March')]
-      ]);
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Months');
+    data.addColumn('number', 'Day');
+    data.addRows([
+        ['Jan', entry.get('January')],
+        ['Feb', entry.get('February')],
+        ['Mar', entry.get('March')],
+        ['Apr', entry.get('April')],
+        ['May', entry.get('May')],
+        ['Jun', entry.get('June')],
+        ['Jul', entry.get('July')],
+        ['Aug', entry.get('August')],
+        ['Sep', entry.get('September')],
+        ['Oct', entry.get('October')],
+        ['Nov', entry.get('November')],
+        ['Dec', entry.get('December')]
+    ]);
+
+    // Ticks 
+    var vAxisRange = data.getColumnRange(1);
+    var ticks = [];
+    for (var i = 0; i <= vAxisRange.max; i++) {
+        ticks.push(i);
+    }
 
     // Set chart options
     var options = {
-        'title': 'How Much Pizza I Ate Last Night',
-        // 'width': 1400,
-        // 'height': 400
+        vAxis: {
+            format: '0',
+            ticks: ticks
+        },
+        //   ticks: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
+        'width': 1000,
+        'height': 500
     };
 
     // Instantiate and draw our chart, passing in some options.
