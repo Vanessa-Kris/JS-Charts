@@ -26,10 +26,12 @@ function drawChart() {
 
 
     // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Months');
-    data.addColumn('number', 'Subscriber(s)');
-    data.addRows([
+    // var data = new google.visualization.DataTable();
+    // data.addColumn('string', 'Months');
+    // data.addColumn('number', 'Subscriber(s)');
+    // data.addRows([
+        var data = google.visualization.arrayToDataTable([
+        ['Month', 'Day'],
         ['Jan', entry.get('January')],
         ['Feb', entry.get('February')],
         ['Mar', entry.get('March')],
@@ -43,27 +45,43 @@ function drawChart() {
         ['Nov', entry.get('November')],
         ['Dec', entry.get('December')]
     ]);
+    // var data = google.visualization.arrayToDataTable([
+    //     ['Subscribers', 'Day'],
+    //     ['Jan',1],
+    //     ['Feb',8],
+    //     ['Mar',8],
+    //     ['Apr',9],
+    //     ['May',9],
+    //     ['Jun',9],
+    //     ['Jul',10],
+    //     ['Aug',11],
+    //     ['sep',14],
+    //     ['Oct',14],
+    //     ['Nov',15],
+    //     ['Dec',15]
+    // ]);
 
     // Ticks 
-    var vAxisRange = data.getColumnRange(1);
-    var ticks = [];
-    for (var i = 0; i <= vAxisRange.max; i++) {
-        ticks.push(i);
-    }
+    // var vAxisRange = data.getColumnRange(1);
+    // var ticks = [];
+    // for (var i = 0; i <= vAxisRange.max; i++) {
+    //     ticks.push(i);
+    // }
 
     // Set chart options
     var options = {
         vAxis: {
             title: 'Days',
-            format: '0',
-            ticks: ticks
+            // format: '0',
+            // ticks: ticks,
+            // maxValue: 31
         },
         hAxis: {
             title: 'Months'
         },
         //   ticks: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
         'width': 1000,
-        'height': 500
+        'height': 800
     };
 
     // Instantiate and draw our chart, passing in some options.
