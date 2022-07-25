@@ -10,33 +10,6 @@ google.charts.setOnLoadCallback(drawChart);
     // instantiates the chart, passes in the data and
     // draws it.
     function drawChart() {
-    //     const entry = new Map([['Month'], ['Day']]);
-    //     entry.set('Jauary',{Month: 'Jan', Day: '31'});
-    //     entry.set('February', 4);
-    //     entry.set('March', 6);
-    //     entry.set('April', 8);
-    //     entry.set('May', 10);
-    //     entry.set('June', 16);
-    //     entry.set('July', 19);
-    //     entry.set('August', 17);
-    //     entry.set('September', 13);
-    //     entry.set('October', 6);
-    //     entry.set('November', 20);
-    //     entry.set('December', 31);
-
-    // const entry = new Map();
-    // entry.set('Jauary',{Month: 'Jan', Day: '31'});
-    // entry.set('Febuary',{Month: 'Feb', Day: '31'});
-    // entry.set('March',{Month: 'Mar', Day: '31'});
-    // entry.set('April',{Month: 'Apr', Day: '31'});
-    // entry.set('May',{Month: 'May', Day: '31'});
-    // entry.set('June',{Month: 'Jun', Day: '31'});
-    // entry.set('July',{Month: 'Jul', Day: '31'});
-    // entry.set('August',{Month: 'Aug', Day: '31'});
-    // entry.set('September',{Month: 'Sep', Day: '31'});
-    // entry.set('October',{Month: 'Oct', Day: '31'});
-    // entry.set('November',{Month: 'Nov', Day: '31'});
-    // entry.set('December',{Month: 'Dec', Day: '31'});
 
     const entry = [
         {Month: 'Month', Day: 'Days'},
@@ -55,7 +28,7 @@ google.charts.setOnLoadCallback(drawChart);
     ];
 
     // Create the data table.
-    
+    // Call data using map
     var data = google.visualization.arrayToDataTable (
         entry.map(function(element){
             result = []
@@ -64,28 +37,6 @@ google.charts.setOnLoadCallback(drawChart);
             return result;
         })
     );
-        
-    // .entry.Map(function(element){
-    //     ['Month', 'Day']
-    //     return `${element.Month} ${element.Day}`;
-    // C
-
-    // var data = google.visualization.arrayToDataTable([
-    // ['Month', 'Day'],
-    // ['Jan',entry.get('January')],
-    // ['Feb', entry.get('February')],
-    // ['Mar', entry.get('March')],
-    // ['Apr', entry.get('April')],
-    // ['May', entry.get('May')],
-    // ['Jun', entry.get('June')],
-    // ['Jul', entry.get('July')],
-    // ['Aug', entry.get('August')],
-    // ['Sep', entry.get('September')],
-    // ['Oct', entry.get('October')],
-    // ['Nov', entry.get('November')],
-    // ['Dec', entry.get('December')]
-    // ]);
-    
 
     // Ticks 
     var vAxisRange = data.getColumnRange(1);
