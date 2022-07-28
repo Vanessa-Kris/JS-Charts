@@ -6,12 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container-fluid">
-    <!--Div that will hold the pie chart-->
+        <div class="row">
+            <div class="col">
     <div id="chart_div"></div>
+</div>
+
+    <div class="col mt-5">
+    <label class="form-label">Chart type:</label>
+
+    <select class="form-control " id="chart-type">
+        <option value="">__select__</option>
+        <option value="line_chart">Line chart</option>
+        <option value="bar_chart">Bar Chart</option>
+    </select>
+
+    <label class="form-label">Operator:</label>
+
+    <select class="form-control " id="chart-type">
+        <option value="">__select__</option>
+        <option value="mtn">MTN</option>
+        <option value="orange">Orange</option>
+        <option value="camtel">Camtel</option>
+        <option value="nextel">Nextel</option>
+    </select>
+
+    <label class="form-label">Months:</label>
+
+    <select class="form-control " id="chart-type">
+        <option value="">__select__</option>
+        <option value="january">January</option>
+        <option value="febuary">Febuary</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="May">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+
+
+    </select>
+</div>
+</div>
+
 </div>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

@@ -14,17 +14,17 @@ google.charts.setOnLoadCallback(drawChart);
     const entry = [
         {Month: 'Month', Day: 'Days'},
         {Month: 'Jan', Day: 31},
-        {Month: 'Feb', Day: 29},
-        {Month: 'Mar', Day: 31},
-        {Month: 'Apr', Day: 30},
-        {Month: 'May', Day: 31},
-        {Month: 'Jun', Day: 30},
-        {Month: 'Jul', Day: 31},
-        {Month: 'Aug', Day: 31},
-        {Month: 'Sep', Day: 30},
-        {Month: 'Oct', Day: 31},
-        {Month: 'Nov', Day: 30},
-        {Month: 'Dec', Day: 31}
+        // {Month: 'Feb', Day: 29},
+        // {Month: 'Mar', Day: 31},
+        // {Month: 'Apr', Day: 30},
+        // {Month: 'May', Day: 31},
+        // {Month: 'Jun', Day: 30},
+        // {Month: 'Jul', Day: 31},
+        // {Month: 'Aug', Day: 31},
+        // {Month: 'Sep', Day: 30},
+        // {Month: 'Oct', Day: 31},
+        // {Month: 'Nov', Day: 30},
+        // {Month: 'Dec', Day: 31}
     ];
 
     // Create the data table.
