@@ -11,6 +11,8 @@ google.charts.setOnLoadCallback(drawChart);
     // draws it.
     function drawChart() {
 
+
+        // My data arr
     const entry = [
         {Month: 'Days', Orange: 'Orange subscribers', Camtel: 'Camtel Subscribers', MTN: 'MTN Subscribers', Nextel: 'Nextel'},
         {Month: 'Day1', Orange: 20, Camtel: 31, MTN: 0,  Nextel: 10},
@@ -64,20 +66,13 @@ google.charts.setOnLoadCallback(drawChart);
        
     );
 
-    // Ticks 
-    // var vAxisRange = data.getColumnRange(1);
-    // var ticks = [];
-    // for (var i = 0; i <= vAxisRange.max; i++) {
-    //     ticks.push(i);
-    // }
-
+    
     // Set chart options
     var options = { 
         vAxis: {
             title: 'Days',
             format: '0',
-            // ticks: ticks,
-            // maxValue: 31
+           
         },
         hAxis: {
             title: 'January'
