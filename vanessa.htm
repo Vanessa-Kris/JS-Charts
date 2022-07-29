@@ -12,11 +12,11 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col-12">
     <div id="chart_div"></div>
 </div>
 
-    <div class="col mt-5">
+    <div class="col mt-5 ps-5">
     <label class="form-label">Chart type:</label>
 
     <select class="form-control " id="chart-type">
@@ -39,21 +39,28 @@
 
     <select class="form-control " id="chart-type">
         <option value="">__select__</option>
-        <option value="january">January</option>
-        <option value="febuary">Febuary</option>
-        <option value="march">March</option>
-        <option value="april">April</option>
-        <option value="May">May</option>
-        <option value="june">June</option>
-        <option value="july">July</option>
-        <option value="august">August</option>
-        <option value="september">September</option>
-        <option value="october">October</option>
-        <option value="november">November</option>
-        <option value="december">December</option>
-
-
+        <option onchange="plot" id="january" value="january">January</option>
+        <option id="febuary" value="febuary">Febuary</option>
+        <option id="march" value="march">March</option>
+        <option id="april"value="april">April</option>
+        <option id="may" value="May">May</option>
+        <option id="june" value="june">June</option>
+        <option id="july" value="july">July</option>
+        <option id="august" value="august">August</option>
+        <option id="september" value="september">September</option>
+        <option id="october" value="october">October</option>
+        <option id="november" value="november">November</option>
+        <option id="december" value="december">December</option>
     </select>
+
+    <!-- <label class="form-label">Days:</label>
+
+    <select class="form-control " id="chart-type">
+        <option value="">__select__</option>
+        <option id="29" value="29">29</option>
+        <option id="30" value="30">30</option>
+        <option id="31" value="31">31</option>
+    </select> -->
 </div>
 </div>
 
