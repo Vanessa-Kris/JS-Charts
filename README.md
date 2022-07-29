@@ -1,5 +1,6 @@
 # JS-Charts
-1. Draw a line chart using google charts API
-2. Vertical axis should be days of a month 1-31
-3. Horizontal axis should be months Jan - Dec
-4. Store the data in a single map variable.
+* This chart uses google charts API
+* Vertical axis plots months
+* Horizontal axis plots days
+* Data is stored in a single map variable.
+* Filters by operators/months and chart type(Yet to implement)
