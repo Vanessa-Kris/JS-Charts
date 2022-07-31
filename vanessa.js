@@ -253,17 +253,26 @@ function mymtnFunction() {
             hAxis: {
                 title: document.getElementById('months').value
             },
+            // 'height': 300,
             'title': 'Daily Subscribers Visualization',
 
         };
 
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+        let chart_type = document.getElementById("chart-type").value;
+        if (chart_type == "line_chart") {
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+        if (chart_type == "bar_chart") {
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
     }
 }
-// }
-// )
+
 
 // Orange!
 function myorangeFunction() {
@@ -302,8 +311,17 @@ function myorangeFunction() {
         };
 
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+        let chart_type = document.getElementById("chart-type").value;
+        if (chart_type == "line_chart") {
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+        if (chart_type == "bar_chart") {
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
     }
 }
 
@@ -347,22 +365,31 @@ function mycamtelFunction() {
         };
 
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+        let chart_type = document.getElementById("chart-type").value;
+        if (chart_type == "line_chart") {
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+        if (chart_type == "bar_chart") {
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
     }
 }
 
 // Nextel!
 function mynextelFunction() {
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-     
-        
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
-    
-        function drawChart() {
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
         var data = google.visualization.arrayToDataTable(
             entry.map(function (element) {
                 result = []
@@ -370,75 +397,95 @@ function mynextelFunction() {
                 result.push(element.Nextel)
                 return result;
             })
-    
+
         );
-    
-    
+
+
         // Set chart options
         var options = {
             vAxis: {
                 title: 'Days',
                 format: '0',
-    
+
             },
             hAxis: {
                 title: document.getElementById('months').value
             },
-        //     // 'width': 1000,
-        //     // 'height': 800
+            //     // 'width': 1000,
+            //     // 'height': 800
             'title': 'Daily Subscribers Visualization',
-    
+
         };
-    
+
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-        }}
+        let chart_type = document.getElementById("chart-type").value;
+        if (chart_type == "line_chart") {
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+        if (chart_type == "bar_chart") {
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+    }
+}
 
 
-        // All
-        function myallFunction() {
-            // if("operator" == "mtn") {
-                google.charts.load('current', {
-                    'packages': ['corechart']
-                });
-             
-                
-                // Set a callback to run when the Google Visualization API is loaded.
-                google.charts.setOnLoadCallback(drawChart);
-            
-                function drawChart() {
-                var data = google.visualization.arrayToDataTable(
-                    entry.map(function (element) {
-                        result = []
-                        result.push(element.Month)
-                        result.push(element.MTN)
-                        result.push(element.Camtel)
-                        result.push(element.MTN)
-                        result.push(element.Nextel)
-                        return result;
-                    })
-            
-                );
-            
-            
-                // Set chart options
-                var options = {
-                    vAxis: {
-                        title: 'Days',
-                        format: '0',
-            
-                    },
-                    hAxis: {
-                        title: document.getElementById('months').value
-                    },
-                //     // 'width': 1000,
-                //     // 'height': 800
-                    'title': 'Daily Subscribers Visualization',
-            
-                };
-            
-                // Instantiate and draw our chart, passing in some options.
-                var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-                chart.draw(data, options);
-                }}
+// All
+function myallFunction() {
+    // if("operator" == "mtn") {
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable(
+            entry.map(function (element) {
+                result = []
+                result.push(element.Month)
+                result.push(element.MTN)
+                result.push(element.Camtel)
+                result.push(element.Orange)
+                result.push(element.Nextel)
+                return result;
+            })
+
+        );
+
+
+        // Set chart options
+        var options = {
+            vAxis: {
+                title: 'Days',
+                format: '0',
+
+            },
+            hAxis: {
+                title: document.getElementById('months').value
+            },
+            //     // 'width': 1000,
+            //     // 'height': 800
+            'title': 'Daily Subscribers Visualization',
+
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        let chart_type = document.getElementById("chart-type").value;
+        if (chart_type == "line_chart") {
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+        if (chart_type == "bar_chart") {
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+        }
+    }
+}

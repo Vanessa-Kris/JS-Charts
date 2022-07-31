@@ -1,3 +1,11 @@
+body {
+    background-color: rgb(151, 182, 227);
+}
+
 .form-control {
     width: 119px;
+}
+
+.me {
+    height: 800px
 }
