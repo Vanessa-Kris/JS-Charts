@@ -23,7 +23,43 @@
 
             <div class="col mt-5 ps-5">
 
-                <!-- Chart type -->
+    
+
+                <!-- Months -->
+                <label class="form-label">Months:</label>
+
+                <select class="form-control " id="months">
+                    <option value="">Month</option>
+                    <option id="january" value="january">January</option>
+                    <option id="febuary" value="febuary">Febuary</option>
+                    <option id="march" value="march">March</option>
+                    <option id="april" value="april">April</option>
+                    <option id="may" value="May">May</option>
+                    <option id="june" value="june">June</option>
+                    <option id="july" value="july">July</option>
+                    <option id="august" value="august">August</option>
+                    <option id="september" value="september">September</option>
+                    <option id="october" value="october">October</option>
+                    <option id="november" value="november">November</option>
+                    <option id="december" value="december">December</option>
+                </select>
+
+
+                 <!-- Operator -->
+                 <label class="form-label">Operator:</label>
+
+                 <select class="form-control " id="operator">
+                     <option value="">Operator</option>
+                     <option onclick="mymtnFunction()" value="mtn">MTN</option>
+                     <option onclick="myorangeFunction()" value="orange">Orange</option>
+                     <option onclick="mycamtelFunction()" value="camtel">Camtel</option>
+                     <option onclick="mynextelFunction()" value="nextel">Nextel</option>
+                     <option onclick="myallFunction()" value="nextel">All</option>
+                 </select>
+
+
+
+                  <!-- Chart type -->
                 <label class="form-label">Chart type:</label>
 
                 <select class="form-control " id="chart-type">
@@ -31,37 +67,6 @@
                     <option value="line_chart">Line chart</option>
                     <option value="bar_chart">Bar Chart</option>
                 </select>
-
-                <!-- Operator -->
-                <label class="form-label">Operator:</label>
-
-                <select class="form-control " id="operator">
-                    <option value="">Operator</option>
-                    <option onclick="mymtnFunction()" value="mtn">MTN</option>
-                    <option onclick="myorangeFunction()" value="orange">Orange</option>
-                    <option onclick="mycamtelFunction()" value="camtel">Camtel</option>
-                    <option onclick="mynextelFunction()" value="nextel">Nextel</option>
-                </select>
-
-                <!-- Months -->
-                <label class="form-label">Months:</label>
-
-                <select class="form-control " id="months">
-                    <option value="">Month</option>
-                    <option onclick="myjanFunction()" id="january" value="january">January</option>
-                    <option onclick="myfebFunction()" id="febuary" value="febuary">Febuary</option>
-                    <option onclick="mymarFunction()" id="march" value="march">March</option>
-                    <option onclick="myaprFunction()" id="april" value="april">April</option>
-                    <option onclick="mymayFunction()" id="may" value="May">May</option>
-                    <option onclick="myjunFunction()" id="june" value="june">June</option>
-                    <option onclick="myjulFunction()" id="july" value="july">July</option>
-                    <option onclick="myaugFunction()" id="august" value="august">August</option>
-                    <option onclick="mysepFunction()" id="september" value="september">September</option>
-                    <option onclick="myoctFunction()" id="october" value="october">October</option>
-                    <option onclick="mynovFunction()" id="november" value="november">November</option>
-                    <option onclick="mydecFunction()" id="december" value="december">December</option>
-                </select>
-
 
             </div>
         </div>

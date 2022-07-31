@@ -1,17 +1,4 @@
-// Load the Visualization API and the corechart package.
-// google.charts.load('current', {
-//     'packages': ['corechart']
-// });
-
-// Set a callback to run when the Google Visualization API is loaded.
-// google.charts.setOnLoadCallback(drawChart);
-
-// Callback that creates and populates a data table,
-// instantiates the chart, passes in the data and
-// draws it.
-// function drawChart() {
-
-
+// My data
 // My data arr
 const entry = [{
         Month: 'Days',
@@ -232,49 +219,10 @@ const entry = [{
     }
 ];
 
-// Create the data table.
-// Call data using map
-// var data = google.visualization.arrayToDataTable(
-//     entry.map(function (element) {
-//         result = []
-//         result.push(element.Month)
-//         result.push(element.Orange)
-//         // result.push(element.Camtel)
-//         // result.push(element.MTN)
-//         // result.push(element.Nextel)
-//         return result;
-//     })
-
-// );
-
-
-// Set chart options
-// var options = {
-//     vAxis: {
-//         title: 'Days',
-//         format: '0',
-
-//     },
-//     hAxis: {
-//         title: 'January'
-//     },
-//     // 'width': 1000,
-//     // 'height': 800
-//     'title': 'Daily Subscribers Visualization',
-
-// };
-
-// Instantiate and draw our chart, passing in some options.
-//     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-//     chart.draw(data, options);
-// }
-// document.getSelection("operator").addEventListener("click", function () {
-//     let operator = document.getElementById("operator").value;
 
 
 //MTN!
 function mymtnFunction() {
-    // if("operator" == "mtn") {
     google.charts.load('current', {
         'packages': ['corechart']
     });
@@ -289,9 +237,6 @@ function mymtnFunction() {
                 result = []
                 result.push(element.Month)
                 result.push(element.MTN)
-                // result.push(element.Camtel)
-                // result.push(element.MTN)
-                // result.push(element.Nextel)
                 return result;
             })
 
@@ -306,10 +251,8 @@ function mymtnFunction() {
 
             },
             hAxis: {
-                title: 'January'
+                title: document.getElementById('months').value
             },
-            //     // 'width': 1000,
-            //     // 'height': 800
             'title': 'Daily Subscribers Visualization',
 
         };
@@ -324,7 +267,6 @@ function mymtnFunction() {
 
 // Orange!
 function myorangeFunction() {
-    // if("operator" == "mtn") {
     google.charts.load('current', {
         'packages': ['corechart']
     });
@@ -339,9 +281,6 @@ function myorangeFunction() {
                 result = []
                 result.push(element.Month)
                 result.push(element.Orange)
-                // result.push(element.Camtel)
-                // result.push(element.MTN)
-                // result.push(element.Nextel)
                 return result;
             })
 
@@ -356,10 +295,8 @@ function myorangeFunction() {
 
             },
             hAxis: {
-                title: 'January'
+                title: document.getElementById('months').value
             },
-            //     // 'width': 1000,
-            //     // 'height': 800
             'title': 'Daily Subscribers Visualization',
 
         };
@@ -373,7 +310,6 @@ function myorangeFunction() {
 
 // Camtel!
 function mycamtelFunction() {
-    // if("operator" == "mtn") {
     google.charts.load('current', {
         'packages': ['corechart']
     });
@@ -387,10 +323,7 @@ function mycamtelFunction() {
             entry.map(function (element) {
                 result = []
                 result.push(element.Month)
-                // result.push(element.MTN)
                 result.push(element.Camtel)
-                // result.push(element.MTN)
-                // result.push(element.Nextel)
                 return result;
             })
 
@@ -405,7 +338,7 @@ function mycamtelFunction() {
 
             },
             hAxis: {
-                title: 'January'
+                title: document.getElementById('months').value
             },
             //     // 'width': 1000,
             //     // 'height': 800
@@ -421,7 +354,6 @@ function mycamtelFunction() {
 
 // Nextel!
 function mynextelFunction() {
-    // if("operator" == "mtn") {
         google.charts.load('current', {
             'packages': ['corechart']
         });
@@ -435,9 +367,6 @@ function mynextelFunction() {
             entry.map(function (element) {
                 result = []
                 result.push(element.Month)
-                // result.push(element.MTN)
-                // result.push(element.Camtel)
-                // result.push(element.MTN)
                 result.push(element.Nextel)
                 return result;
             })
@@ -453,7 +382,7 @@ function mynextelFunction() {
     
             },
             hAxis: {
-                title: 'January'
+                title: document.getElementById('months').value
             },
         //     // 'width': 1000,
         //     // 'height': 800
@@ -465,3 +394,51 @@ function mynextelFunction() {
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
         }}
+
+
+        // All
+        function myallFunction() {
+            // if("operator" == "mtn") {
+                google.charts.load('current', {
+                    'packages': ['corechart']
+                });
+             
+                
+                // Set a callback to run when the Google Visualization API is loaded.
+                google.charts.setOnLoadCallback(drawChart);
+            
+                function drawChart() {
+                var data = google.visualization.arrayToDataTable(
+                    entry.map(function (element) {
+                        result = []
+                        result.push(element.Month)
+                        result.push(element.MTN)
+                        result.push(element.Camtel)
+                        result.push(element.MTN)
+                        result.push(element.Nextel)
+                        return result;
+                    })
+            
+                );
+            
+            
+                // Set chart options
+                var options = {
+                    vAxis: {
+                        title: 'Days',
+                        format: '0',
+            
+                    },
+                    hAxis: {
+                        title: document.getElementById('months').value
+                    },
+                //     // 'width': 1000,
+                //     // 'height': 800
+                    'title': 'Daily Subscribers Visualization',
+            
+                };
+            
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+                }}
